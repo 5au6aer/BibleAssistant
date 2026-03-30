@@ -1,0 +1,24 @@
+# --- Eigene Versionierung / Archiv / Programm-Outputs / Private-Data ---
+releases/
+archive/
+exports/
+data/progress.json
+data/master_pass.txt
+*.zip
+
+# Python temporäre Dateien
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtuelle Umgebungen
+venv/
+env/
+
+# Windows Systemdateien
+Thumbs.db
+desktop.ini
+
+# OneDrive / Editor Backups
+.vscode/
+.idea/

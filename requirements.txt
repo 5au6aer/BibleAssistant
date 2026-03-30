@@ -1,0 +1,8 @@
+# GUI Framework
+customtkinter>=5.2.0
+
+# PDF Generation
+fpdf2>=2.7.0
+
+# Hilfswerkzeuge (optional, aber empfohlen)
+python-dotenv

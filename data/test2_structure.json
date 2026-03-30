@@ -1,0 +1,12 @@
+{
+    "Part A": {
+        "Book": 10,
+        "Letter": 2,
+        "Dokument": 1
+    },
+    "Part B": {
+        "Letter": 1,
+        "Document": 4,
+        "Book": 5
+    }
+}
