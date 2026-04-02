@@ -1,46 +1,31 @@
-# Bibel Assistent (Version beta-1.3)
+# Bible Assistant v1.4
 
-Ein Desktop-Anwendung zur Verwaltung und Dokumentation des persönlichen Bibellese-Fortschritts.
+An intelligent reading plan manager and lock-screen reminder to keep your spiritual goals on track.
 
-## Funktionsumfang
-- Interaktives Dashboard: Visualisierung des Fortschritts in verschiedenen Bereichen (z. B. Altes Testament, Neues Testament oder benutzerdefinierte Abschnitte).
-- Sperrbildschirm-Modus: Tägliche Erfassung des gelesenen Pensums inklusive optionaler Notizfunktion.
-- PDF-Export: Automatische Generierung von detaillierten Lese-Protokollen im Verzeichnis /exports.
-- Sicherheit: Schutz administrativer Funktionen (Reset, Löschen, Import) durch ein Master-Passwort.
+## New in v1.4
+- **Multi-Plan Support:** Import and switch between different reading plans.
+- **Enhanced PDF Export:** Professional reports with biblical sorting.
+- **Smart Filtering:** Quick-search books in the lock screen (ignores case/dots).
+- **Security:** Master password protection for administrative actions (Reset/Delete/Import).
+- **Session Tracking:** Automatic "Skip" detection if a session is started but not completed.
 
-## Release Notes
+## Project Structure
+- `main.py`: The entry point and UI dashboard.
+- `src/database.py`: Core logic, statistics, and data management.
+- `data/`: Contains progress, plans, and the master password.
+- `exports/`: Destination for PDF reports and backups.
 
-### Version beta-1.3 (Aktuell)
-- **Projekt-Strukturierung:** Umstellung auf eine saubere Verzeichnislogik (/src, /data, /exports, /archive).
-- **Open Source Vorbereitung:** Implementierung der MIT-Lizenz und Erstellung einer umfassenden .gitignore.
-- **Daten-Sicherheit:** Trennung von Programmlogik und privaten Benutzerdaten (Master-Passwort und Fortschritt werden nun lokal geschützt).
-- **Code-Hygiene:** Entfernung von Altlasten (SQL-Datenbank-Überreste) und Optimierung der Import-Struktur durch Packages.
-- **Dokumentation:** Vollständige Überarbeitung der README und Präzisierung der requirements.txt.
+## Setup & Usage
+1. Install requirements: `pip install customtkinter fpdf`
+2. Run `python main.py`.
+3. If you haven't read today, the lock screen will appear.
+4. Use the Dashboard to track progress or export your data.
 
-### Version beta-1.2
-- Implementierung des PDF-Exports für Lese-Protokolle.
-- Hinzufügen der Master-Passwort-Abfrage für administrative Funktionen.
-- Dashboard-Visualisierung der 9 Segmente.
+*Note: Your master password is automatically generated in `data/master_pass.txt`.*
 
-## Installation und Start
-
-1. Repository klonen oder Quelldateien in ein lokales Verzeichnis kopieren.
-
-2. Abhängigkeiten installieren:
-pip install -r requirements.txt
-
-3. Programm starten:
-python main.py
-
-## Verzeichnisstruktur
-- /data: Enthält die Datei progress.json (Benutzerfortschritt), die Struktur-Dateien (*_structure.json) und das Master-Passwort (master_pass.txt).
-- /src: Enthält die Programmlogik und die Datenbank-Klasse (database.py).
-- /exports: Zielverzeichnis für automatisch generierte PDF-Reports und Backup-Dateien.
-- /archive: Manuelle Ablage für veraltete Dateiversionen oder historische Exporte.
-
-## Systemvoraussetzungen
+## System Requirements
 - Python 3.x
-- Betriebssystem: Windows (getestet), Linux/macOS (kompatibel)
+- Operating System: Windows (tested), Linux/macOS (compatible)
 
-## Lizenz
-Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE) Datei für Details.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

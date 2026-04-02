@@ -1,16 +1,19 @@
 {
-    "AK": {
-        "Tobit": 14,
-        "Judith": 16,
-        "Weisheit Salomos": 19,
-        "Jesus Sirach": 51,
-        "Baruch": 6,
-        "1. Makkabäer": 16,
-        "2. Makkabäer": 15,
-        "Additionen Esther": 10,
-        "Gebet Manasses": 1,
-        "1. Esdras": 9,
-        "2. Esdras": 16,
-        "Psalm 151": 1
+    "info": "Die Apokryphen.\n12 Bücher",
+    "structure": {
+        "AK": {
+            "Tobit": 14,
+            "Judith": 16,
+            "Weisheit Salomos": 19,
+            "Jesus Sirach": 51,
+            "Baruch": 6,
+            "1. Makkabäer": 16,
+            "2. Makkabäer": 15,
+            "Additionen Esther": 10,
+            "Gebet Manasses": 1,
+            "1. Esdras": 9,
+            "2. Esdras": 16,
+            "Psalm 151": 1
+        }
     }
 }
