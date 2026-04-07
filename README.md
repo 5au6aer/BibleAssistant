@@ -4,7 +4,7 @@ An intelligent companion for reading discipline and progress documentation.
 
 Bible Assistant is a functional proof-of-concept (PoC) designed to explore how software can actively support the formation of consistent reading habits. It combines psychological incentives (desktop lock-screen) with data evaluation (PDF reporting).
 
-![Dashboard](docs/Dashboard3.png)
+![Dashboard](docs/Dashboard3.PNG)
 
 ---
 
@@ -16,7 +16,7 @@ Bible Assistant acts as a purposeful entry point to your digital workday.
 - Focus Protection: Access to the desktop is only granted after confirming the daily reading or making a conscious decision to skip.
 - Smart Search: High-speed book entry using fault-tolerant filtering logic (ignores case, dots, and special characters).
 
-![Lock Screen](docs/LockScreen.png)
+![Lock Screen](docs/LockScreen.PNG)
 
 ### Professional Reporting & Documentation
 Data is valuable, but presentation makes it meaningful.
@@ -24,7 +24,7 @@ Data is valuable, but presentation makes it meaningful.
 - Biblical Sorting: Regardless of the chronological reading date, entries are logically sorted from Genesis to Revelation in the final report.
 - Integrated Journaling: Capture and export personal notes alongside your completed chapters.
 
-![PDF Report](docs/ReadingLog.png)
+![PDF Report](docs/ReadingLog.PNG)
 
 ### Flexible Multi-Plan Management
 The system adapts to the user's individual journey, not the other way around.
@@ -35,22 +35,22 @@ The system adapts to the user's individual journey, not the other way around.
 - Master Password: Administrative actions (resetting data, deleting progress, or importing new plans) are protected by an auto-generated master password.
 - Session Tracking: Automatically detects interrupted sessions and offers to resume them upon the next startup.
 
-![Master Password](docs/MasterPasswordRequest.png)
+![Master Password](docs/MasterPasswordRequest.PNG)
 
 ---
 
 ### Other
 - Display if the Reading-Plan is completed:
 
-![Completed](docs/Dashboard100.png)
+![Completed](docs/Dashboard100.PNG)
 
 - Choose other/custom Reading-Plans:
 
-![Select other Plan](docs/OtherPlans.png)
+![Select other Plan](docs/OtherPlans.PNG)
 
 - Create your own Reading-Plans:
 
-![Create Custom Plan](docs/CustomPlan.png)
+![Create Custom Plan](docs/CustomPlan.PNG)
 
 ## Project Structure
 - main.py: Central dashboard and UI controller.
