@@ -1,11 +1,11 @@
 {
-    "info": "Paulus:\n\n1 - Bekehrung, Reisen und Dienst\n2 - seine 14 Briefe",
+    "info": "Paulus:\n\n1 - Bekehrung, Reisen und Dienst\n2 - Paulus 13(+1) Briefe",
     "structure": {
-        "1": {
-            "Apostelgeschichte 7–9": 3,
-            "Apostelgeschichte 13–28": 16
+        "Apostelgeschichte": {
+            "Bekehrung Apg. 7–9": 3,
+            "Reisen Apg. 13–28": 16
         },
-        "2": {
+        "Briefe": {
             "Römer": 16,
             "1. Korinther": 16,
             "2. Korinther": 13,
@@ -19,7 +19,7 @@
             "2. Timotheus": 4,
             "Titus": 3,
             "Philemon": 1,
-            "Hebräer": 13
+            "(Hebräer)": 13
         }
     }
 }
