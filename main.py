@@ -2,12 +2,55 @@ import os
 import sys
 import secrets
 import string
+import ctypes
 import customtkinter as ctk
 from tkinter import messagebox
+import winshell  # Du musst eventuell 'pip install winshell pywin32' ausführen
+from win32com.client import Dispatch
+
+# Windows Fix für Taskleisten-Icons
+try:
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("bibleassistant.v1.6")
+except:
+    pass
+
+# NEU: Pfad-Logik für EXE und Skript-Modus
+def resource_path(relative_path):
+    """ Errechnet den Pfad, egal ob als Skript oder als EXE ausgeführt """
+    try:
+        # PyInstaller erstellt einen temporären Ordner _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        # Im Skript-Modus nutzen wir das aktuelle Verzeichnis
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, relative_path)
+
+def add_to_startup():
+    """Erstellt eine Verknüpfung der EXE im Windows-Startup-Ordner."""
+    if not getattr(sys, 'frozen', False):
+        return # Nur ausführen, wenn es eine EXE ist
+
+    app_path = sys.executable
+    startup_path = os.path.join(winshell.startup(), "BibleAssistant.lnk")
+    
+    if not os.path.exists(startup_path):
+        shell = Dispatch('WScript.Shell')
+        shortcut = shell.CreateShortCut(startup_path)
+        shortcut.Targetpath = app_path
+        shortcut.WorkingDirectory = os.path.dirname(app_path)
+        shortcut.IconLocation = app_path
+        shortcut.save()
 
 # Path logic for src folder
-sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
+# Wir nutzen resource_path, damit die EXE auch den 'src' Ordner im Paket findet
+sys.path.append(resource_path("src"))
 from database import BibleDatabase
+
+def set_icon(app):
+    """Setzt das Fenster-Icon sicher für Skript- und EXE-Modus."""
+    icon_path = resource_path(os.path.join("assets", "icon.ico"))
+    if os.path.exists(icon_path):
+        app.after(200, lambda: app.iconbitmap(icon_path))
 
 # --- TRANSLATIONS ---
 LANG_DICT = {
@@ -70,9 +113,7 @@ def show_lock_screen(db, is_voluntary=False):
     db.mark_session_started()
     app = ctk.CTk()
     app.title("Bible Assistant - Lock Screen")
-    icon_path = os.path.join(os.path.dirname(__file__), "assets", "icon.ico")
-    if os.path.exists(icon_path):
-        app.after(200, lambda: app.iconbitmap(icon_path))
+    set_icon(app)
     app.attributes("-fullscreen", True)
     app.attributes("-topmost", True)
     
@@ -172,9 +213,7 @@ def show_lock_screen(db, is_voluntary=False):
 def show_dashboard(db):
     app = ctk.CTk()
     app.title("Bible Assistant - Dashboard")
-    icon_path = os.path.join(os.path.dirname(__file__), "assets", "icon.ico")
-    if os.path.exists(icon_path):
-            app.after(200, lambda: app.iconbitmap(icon_path))
+    set_icon(app)
     app.geometry("1150x900")
     
     # Sprache und Theme aus der Datenbank laden
@@ -309,6 +348,7 @@ def show_dashboard(db):
 
 if __name__ == "__main__":
     db = BibleDatabase()
+    add_to_startup() # <--- Fügt sich beim ersten Start selbst hinzu
     if not db.has_read_today(): 
         show_lock_screen(db)
     show_dashboard(db)

@@ -1,21 +1,28 @@
 import os
 import json
 import shutil
+import sys
 from datetime import date
 import random
 from tkinter import filedialog
 
 class BibleDatabase:
     def __init__(self):
-        # Initialize directory paths
-        self.base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
-        self.main_dir = os.path.abspath(os.path.join(self.base_dir, '..'))
+        # 1. Ermittle das Basis-Verzeichnis (funktioniert für Skript UND EXE)
+        if getattr(sys, 'frozen', False):
+            # Wenn es als EXE läuft, ist sys.executable der Pfad zur .exe Datei
+            self.main_dir = os.path.dirname(sys.executable)
+        else:
+            # Wenn es als Skript läuft
+            self.main_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+        # 2. Definiere die Pfade basierend auf main_dir
+        self.base_dir = os.path.join(self.main_dir, 'data')
         self.progress_path = os.path.join(self.base_dir, 'progress.json')
         
-        # Initialize plan info variable
+        # Den Rest so lassen wie bisher...
         self.plan_info = ""
 
-        # Create data directory if it doesn't exist
         if not os.path.exists(self.base_dir):
             os.makedirs(self.base_dir)
             
