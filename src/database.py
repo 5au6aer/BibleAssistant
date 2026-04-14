@@ -52,14 +52,17 @@ class BibleDatabase:
         
         # Safety Check: Ensure essential keys exist (crucial for legacy files)
         if "settings" not in self.progress:
-            self.progress["settings"] = {"active_plan": "Standard", "theme": "dark"}
+            self.progress["settings"] = {"active_plan": "Standard", "theme": "dark", "lang": "de"}
         
+        if "lang" not in self.progress["settings"]:
+            self.progress["settings"]["lang"] = "de"
+            
         if "plans" not in self.progress:
             self.progress["plans"] = {}
 
     def _create_empty_progress(self):
         """Initializes a fresh progress dictionary."""
-        self.progress = {"settings": {"active_plan": "Standard", "theme": "dark"}, "plans": {}}
+        self.progress = {"settings": {"active_plan": "Standard", "theme": "dark", "lang": "de"}, "plans": {}}
         self.save_progress()
 
     def load_structure(self, plan_name):
@@ -111,6 +114,11 @@ class BibleDatabase:
         self.progress["settings"]["theme"] = mode
         self.save_progress()
 
+    def set_lang(self, lang_code):
+        """Updates the language setting (de/en)."""
+        self.progress["settings"]["lang"] = lang_code
+        self.save_progress()
+
     def get_books(self):
         """Returns a flat list of all book names in the current structure."""
         all_books = []
@@ -129,6 +137,21 @@ class BibleDatabase:
         plan = self.progress["plans"].get(self.active_plan, {})
         return sorted(list(set([c['chapter'] for c in plan.get("chapters_read", []) if c['book'] == book])))
 
+    def format_ranges(self, chapter_list):
+        """Helper to group consecutive numbers into ranges (e.g., 1-5, 7)."""
+        if not chapter_list: return ""
+        nums = sorted(list(set(int(c) for c in chapter_list)))
+        ranges = []
+        if not nums: return ""
+        start = nums[0]
+        for i in range(1, len(nums) + 1):
+            if i < len(nums) and nums[i] == nums[i-1] + 1: continue
+            else:
+                end = nums[i-1]
+                ranges.append(str(start) if start == end else f"{start}-{end}")
+                if i < len(nums): start = nums[i]
+        return ", ".join(ranges)
+
     def get_missing_chapters(self, book):
         """Generates a string representing unread chapters and ranges."""
         total = self.get_max_chapters(book)
@@ -138,15 +161,7 @@ class BibleDatabase:
         if len(read) == 0: return f"1-{total} (Total: {total})"
         if not missing: return f"Completed ({total}/{total})"
         
-        # Logic to group consecutive numbers into ranges (e.g., 1-5, 7)
-        ranges = []; start = missing[0]
-        for i in range(1, len(missing) + 1):
-            if i < len(missing) and missing[i] == missing[i-1] + 1: continue
-            else:
-                end = missing[i-1]
-                ranges.append(str(start) if start == end else f"{start}-{end}")
-                if i < len(missing): start = missing[i]
-        return f"{', '.join(ranges)} ({len(missing)} of {total} left)"
+        return f"{self.format_ranges(missing)} ({len(missing)} of {total} left)"
 
     def log_reading(self, book, range_str, note):
         """Validates and records a new reading session."""
