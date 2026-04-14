@@ -1,0 +1,36 @@
+{
+    "info": "Exil und Rückkehr Israels:\n\n1. Fall Jerusalems und Beginn des Exils\n2. Leben im Exil (Daniel, Hesekiel)\n3. Perserreich und Bewahrung (Esther)\n4. Erste Rückkehr und Tempelbau\n5. Prophetische Ermutigung\n6. Wiederaufbau Jerusalems\n7. Geistlicher Zustand nach der Rückkehr\n\nZiel: Verstehen, wie Gott im Gericht treu bleibt und sein Volk wiederherstellt.",
+    
+    "structure": {
+        "Fall Jerusalems": {
+            "2. Könige 24–25": 2,
+            "Jeremia 39–52": 14,
+            "Klagelieder": 5
+        },
+        "Exil": {
+            "Daniel": 12,
+            "Hesekiel": 48
+        },
+        "Perserreich": {
+            "Esther": 10
+        },
+        "Rückkehr": {
+            "Esra 1–6": 6
+        },
+        "Propheten": {
+            "Haggai": 2,
+            "Sacharja 1–8": 8
+        },
+        "Wiederaufbau": {
+            "Esra 7–10": 4,
+            "Nehemia": 13
+        },
+        "Nach dem Exil": {
+            "Maleachi": 4
+        },
+        "Psalmen (Exil)": {
+            "Psalm 137": 1,
+            "Psalm 126": 1
+        }
+    }
+}

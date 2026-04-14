@@ -1,0 +1,68 @@
+{
+    "info": "Jesu Worte für Jünger:\n\n1. Zugang zum Leben mit Jesus (neue Geburt, Einladung, Abhängigkeit)\n2. Grundlage der Nachfolge (Kreuz, Entscheidung, Preis)\n3. Die Bergpredigt – das Herzstück des Jüngerlebens\n4. Leben in Christus (Johannes: bleiben, erkennen, Geist empfangen)\n5. Inneres Leben (Charakter, Demut, Abhängigkeit von Gott)\n6. Leben in Beziehungen (Liebe, Vergebung, Einheit)\n7. Alltag mit Gott (Gebet, Vertrauen, Sorgen)\n8. Leben im Reich Gottes (Frucht, Treue, Verantwortung)\n9. Umgang mit der Welt (Widerstand, Ablehnung, Treue unter Druck)\n10. Warnungen (Heuchelei, falsche Nachfolge)\n11. Wachsamkeit & Ewigkeit\n\nZiel: Leben als Jünger in beständiger Gemeinschaft mit Jesus, in Abhängigkeit vom Heiligen Geist und in Treue trotz Widerstand.",
+    
+    "structure": {
+        "Zugang zu Jesus (Johannes im Zentrum)": {
+            "Johannes 3,1–21": 1,
+            "Johannes 6,35–40": 1,
+            "Johannes 7,37–39": 1,
+            "Johannes 4,1–26": 1,
+            "Matthäus 11,28–30": 1
+        },
+        "Nachfolge": {
+            "Matthäus 16,24–26": 1,
+            "Markus 8,34–38": 1,
+            "Lukas 14,25–33": 1,
+            "Lukas 9,23–24": 1
+        },
+        "Bergpredigt": {
+            "Matthäus 5–7": 3
+        },
+        "Leben in Christus (Johannes Schwerpunkt)": {
+            "Johannes 10,1–18": 1,
+            "Johannes 14": 1,
+            "Johannes 15": 1,
+            "Johannes 16": 1,
+            "Johannes 17": 1
+        },
+        "Inneres Leben (Charakter & Jüngerschaft)": {
+            "Lukas 6,20–49": 1,
+            "Johannes 15": 1,
+            "Matthäus 18": 1,
+            "Lukas 14,7–11": 1,
+            "Johannes 13,1–17": 1
+},
+        "Beziehungen (Liebe & Umgang mit Menschen)": {
+            "Johannes 13,34–35": 1,
+            "Johannes 15,9–17": 1,
+            "Matthäus 22,34–40": 1,
+            "Lukas 6,27–38": 1,
+            "Lukas 10,25–37": 1
+        },
+        "Alltag mit Gott": {
+            "Matthäus 6,5–34": 1,
+            "Lukas 11,1–13": 1,
+            "Lukas 12,22–34": 1
+        },
+        "Reich Gottes leben": {
+            "Johannes 15,1–8": 1,
+            "Matthäus 25,14–30": 1,
+            "Matthäus 25,31–46": 1,
+            "Lukas 16,1–13": 1
+        },
+        "Umgang mit der Welt (Widerstand & Treue)": {
+            "Johannes 15,18–21": 1,
+            "Johannes 17,14–18": 1,
+            "Lukas 12,1–12": 1,
+            "Johannes 16,33": 1
+        },
+        "Warnungen": {
+            "Matthäus 23": 1,
+            "Matthäus 7,21–27": 1
+        },
+        "Wachsamkeit": {
+            "Matthäus 24–25": 2,
+            "Lukas 12,35–48": 1
+        }
+    }
+}

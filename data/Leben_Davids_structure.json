@@ -1,0 +1,41 @@
+{
+    "info": "Leben Davids:\n\n1. Berufung und Erwählung\n2. Sieg über Goliath und Beginn des öffentlichen Lebens\n3. Verfolgung durch Saul\n4. Aufstieg zum König\n5. Herrschaft in Jerusalem\n6. Fall und Buße (Bathseba)\n7. Familie, Konflikte und Absalom\n8. Letzte Jahre und Vorbereitung des Tempels\n\nZiel: Davids Leben als Beispiel für Berufung, Glauben, Versagen, Umkehr und Treue zu Gott verstehen.",
+    
+    "structure": {
+        "Berufung & Erwählung": {
+            "1. Samuel 16": 1,
+            "Psalm 23": 1
+        },
+        "Goliath & Beginn": {
+            "1. Samuel 17": 1,
+            "1. Samuel 18": 1
+        },
+        "Verfolgung durch Saul": {
+            "1. Samuel 19–31": 13,
+            "Psalm 59": 1,
+            "Psalm 57": 1,
+            "Psalm 142": 1
+        },
+        "Aufstieg zum König": {
+            "2. Samuel 1–5": 5
+        },
+        "Herrschaft in Jerusalem": {
+            "2. Samuel 6–10": 5,
+            "Psalm 24": 1,
+            "Psalm 101": 1
+        },
+        "Fall & Buße": {
+            "2. Samuel 11–12": 2,
+            "Psalm 51": 1
+        },
+        "Konflikte & Absalom": {
+            "2. Samuel 13–20": 8,
+            "Psalm 3": 1
+        },
+        "Letzte Jahre": {
+            "2. Samuel 21–24": 4,
+            "1. Könige 1–2": 2,
+            "1. Chronik 22–29": 8
+        }
+    }
+}

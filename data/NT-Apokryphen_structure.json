@@ -1,0 +1,35 @@
+{
+    "info": "NT-Apokryphen und Apostolische Väter:\n\n1. Frühchristliche Evangelien und Überlieferungen\n2. Apostelgeschichten außerhalb des Kanons\n3. Offenbarungen und apokalyptische Texte\n4. Apostolische Väter (frühe Gemeinde und Lehre)\n\nHinweis: Diese Schriften gehören nicht zum neutestamentlichen Kanon, sind aber historisch wichtig für das Verständnis der frühen Kirche und ihrer Entwicklung.",
+    
+    "structure": {
+        "Frühchristliche Evangelien & Jesus-Überlieferungen": {
+            "Evangelium nach Thomas": 114,
+            "Evangelium nach Philippus": 86,
+            "Evangelium nach Maria Magdalena": 19,
+            "Evangelium nach Nikodemus (Acta Pilati)": 28,
+            "Evangelium nach Petrus (Fragment)": 60,
+            "Protoevangelium des Jakobus": 25
+        },
+        
+        "Apostelgeschichten (außerkanonisch)": {
+            "Apostelgeschichte des Paulus": 9,
+            "Apostelgeschichte des Petrus": 41,
+            "Apostelgeschichte des Johannes": 115,
+            "Apostelgeschichte des Thomas": 170
+        },
+        
+        "Offenbarungen & apokalyptische Texte": {
+            "Offenbarung des Petrus": 60,
+            "Hirten des Hermas": 114
+        },
+        
+        "Apostolische Väter (frühe Kirche)": {
+            "1. Clemensbrief": 65,
+            "2. Clemensbrief": 20,
+            "Ignatius von Antiochien Briefe": 7,
+            "Polykarp von Smyrna Brief an die Philipper": 14,
+            "Didache (Lehre der Zwölf Apostel)": 16,
+            "Barnabasbrief": 21
+        }
+    }
+}
