@@ -22,3 +22,9 @@ desktop.ini
 # OneDrive / Editor Backups
 .vscode/
 .idea/
+
+# EXE Builds
+dist/
+build/
+# BibleAssistant.exe
+BibleAssistant.spec
